@@ -34,7 +34,7 @@ nav{
     left: 0;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 322vh;
     background-color: rgba(0, 0, 0, 0.6);
 }
 nav ul{
@@ -219,4 +219,136 @@ progress[value]::-webkit-progress-value{
 }
 .pledge.outOfStock{
     opacity: .4;
+}
+
+.modalWrapper{
+    font-family: 'Commissioner';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 322vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+}
+.modal{
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    padding: 2em 1.5em;
+}
+.modalHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+.modalHeading h2{
+    font-size: 1.2em;
+}
+.modal p{
+    color: hsl(0, 0%, 48%);
+    font-size: .9em;
+    line-height: 1.5em;
+}
+
+.modalPledge{
+    width: 100%;
+    margin: 2em 0;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 2em;
+}
+.modalPledgeHeader{
+    display: flex;
+    margin-bottom: 2em;
+    align-items: center;
+}
+.modalPledgeHeader input{
+    width: 1.75em;
+    margin-right: 1em;
+}
+.modalPledgeHeader h3{
+    font-size: .95em;
+}
+.modalPledgeHeader span{
+    color: hsl(176, 50%, 47%);
+    font-size: .9em;
+    margin-top: .75em;
+}
+.modalPledge p{
+    margin-bottom: 1.5em;
+}
+.modalPledge.outOfOrder{
+    opacity: .5;
+}
+.modalCheck {
+    position: relative;
+}
+.modalCheck label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.modalCheck label:after {
+    content: "";
+    opacity: 0;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 50%;
+} 
+.modalCheck input[type="checkbox"] {
+    visibility: hidden;
+}
+.modalCheck input[type="checkbox"]:checked+label::after{
+    opacity: 1;
+}
+.enter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enter hr{
+    margin-top: 2em;
+    width: 128%;
+    opacity: .3;
+    margin-bottom: 2em;
+}
+.enterInput{
+    display: flex;
+}
+.enterInput input{
+    text-align: center;
+    margin-right: 1.5em;
+    width: 50%;
+    border-radius: 2em;
+    border: 1px solid #ccc;
+    font-weight: 700;
+}
+.enterInput input:hover{
+    outline: none;
+}
+.enterInput button::before{
+    content: '$';
+    color: #ccc;
+    position: absolute;
+    top: 47.5%;
+    left: -80%;
+    transform: translate(-50%,-50%);
+}
+.enterInput button{
+    position: relative;
+    padding: .85em 1.5em;
 }
