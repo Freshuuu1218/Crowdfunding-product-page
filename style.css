@@ -40,11 +40,11 @@ nav{
 nav ul{
     border-radius: .75em;
     left: 5%;
-    top: 10%;
+    top: 4%;
     position: absolute;
     list-style: none;
     background-color: white;
-    height: 22.5%;
+    height: 8%;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -286,6 +286,7 @@ progress[value]::-webkit-progress-value{
 .modalCheck {
     position: relative;
 }
+/* custom checkbox */
 .modalCheck label {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -315,6 +316,7 @@ progress[value]::-webkit-progress-value{
 .modalCheck input[type="checkbox"]:checked+label::after{
     opacity: 1;
 }
+/* section display after checking checkbox */
 .enter{
     display: flex;
     flex-direction: column;
@@ -352,3 +354,31 @@ progress[value]::-webkit-progress-value{
     position: relative;
     padding: .85em 1.5em;
 }
+.complete{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.complete img{
+    width: 20%;
+    margin-bottom: 1em;
+}
+.complete h2{
+    font-size: 1.2em;
+    margin-bottom: 1.25em;
+}
+.complete p{
+    text-align: center;
+    color: hsl(0, 0%, 48%);
+    font-size: .9em;
+    line-height: 1.75em;
+    margin-bottom: 1.5em;
+}
+.complete button{
+    padding: 1em 2em;
+}
+
