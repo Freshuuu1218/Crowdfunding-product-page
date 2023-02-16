@@ -29,6 +29,7 @@ header{
     z-index: 100;
 }
 nav{
+    display: none;
     font-family: 'Commissioner';
     top: 0;
     left: 0;
@@ -88,6 +89,9 @@ button.bookmark{
     margin-left: 1em;
     background-color: transparent;
     border: 0;
+}
+.bookmark p{
+    display: none;
 }
 #productPresentation{
     text-align: center;
@@ -381,4 +385,290 @@ progress[value]::-webkit-progress-value{
 .complete button{
     padding: 1em 2em;
 }
+
+@media (min-width: 768px) {
+    body {
+            background-image: url('./images/image-hero-desktop.jpg');
+        }
+    header {
+        width: 80%;
+        display: flex;
+        margin-bottom: 12em;
+        margin-top: 1.5em;
+        font-family: 'Commissioner';
+    }
+    .hamburgerMenu{
+        display: none;
+    }
+    nav {
+        display: flex;
+        position: relative;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+    }
+    nav ul {
+        border-radius: 0;
+        left: 0;
+        top: 0;
+        position: relative;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: white;
+    }
+    nav ul li {
+        padding-left: 2em;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    nav ul li:nth-child(2) {
+        padding: 0;
+        padding-left: 2em;
+        border-top: none;
+        border-bottom: none;
+    }  
+        nav ul li:hover{
+            cursor: pointer;
+        }
+    section {
+        width: 50%;
+    }  
+    button.cyan{
+        font-size: 1.1em;
+    }
+    button.cyan:hover{
+        cursor: pointer;
+        background-color: hsl(176, 72%, 28%);
+    }
+    button.bookmark {
+        margin-left: auto;
+        margin-right: 0;
+        background-color: hsl(0,0%,95%);
+        border: 0;
+        border-radius: 2em;
+        display: flex;
+        align-items: center;
+        padding: 0 1.5em 0 1em;
+        font-size: 1.1em;
+        color: hsl(0, 0%, 48%);
+        font-weight: 700;
+        font-family: 'Commissioner';
+        cursor: pointer;
+    }
+    button.bookmark img{
+        margin-right: 1em;
+        margin-left: -1em;
+    }
+    .bookmark p{
+        display: flex;
+    }
+    #productPresentation h1 {
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+    #productPresentation p {
+        font-size: 1em;
+    }
+    #productPresentation .buttons {
+        margin-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+    #backDetails {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5em 2.5em;
+    }
+    .numbers{
+        display: flex;
+    }
+    .numbers div{
+        padding-left: 0;
+        padding-right: 2em;
+    }
+    .numbers div:not(:first-child){
+        border-left: 1px solid hsl(0,0%,78%);
+        padding-left: 3em;
+        padding-right: 6em;
+    }
+    #backDetails hr {
+        display: none;
+    }
+    #backDetails .cashBacked,
+    #backDetails .totalBackers,
+    #backDetails .daysLeft {
+        text-align: left;
+    }
+    #backDetails small{
+        font-size: .95em;
+    }
+        #aboutAndPledge {
+            padding: 2.5em 2.5em;
+        }
+    
+        #aboutAndPledge p {
+            font-size: 1em;
+            line-height: 1.75em;
+            margin-bottom: 1.5em;
+        }
+        #aboutAndPledge .pledge {
+            padding: 2em;
+        }
+        .pledge-heading{
+            display: flex;
+            justify-content: space-between;
+        }
+        .pledge h3 {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: .5em;
+        }
+        .pledge-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }    
+        .pledge button.cyan,
+        .pledge button.grey {
+            padding: .5em 2em;
+            height: 3em;
+        }
+                .modalWrapper {
+                    height: 270vh;
+                }
+        
+                .modal {
+                    top: 7.75%;
+                    left: 25%;
+                    padding: 3.5em 3.5em;
+                }
+                .modalHeading {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 1.5em;
+                }
+                .modalHeading img{
+                    margin-top: -4em;
+                    margin-right: -1em;
+                }
+        
+                .modalPledgeHeader {
+                    display: flex;
+                    margin-bottom: 2em;
+                    align-items: center;
+                }
+        
+                .modalPledgeHeader input {
+                    width: 1.75em;
+                    margin-right: 2em;
+                }
+                .checkText{
+                    display: flex;
+                    align-items: center;
+                }
+                .modalPledgeHeader h3 {
+                    font-size: .95em;
+                }
+                .modalPledgeHeader h3:hover{
+                    color: hsl(176, 50%, 47%);
+                    cursor: pointer;
+                }
+                .modalPledgeHeader span {
+                    margin-top: 0;
+                    margin-left: 1em;
+                }
+                .modalPledge p {
+                    margin-top: -1em;
+                    margin-bottom: 0;
+                    margin-left: 3.5em;
+                }
+        
+                .modalCheck {
+                    position: relative;
+                }       
+                .modal .left{
+                    position: absolute;
+                    top: 2em;
+                    right: 5%;
+                } 
+                                .enter {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
+                
+                                .enter hr {
+                                    width: 112%;
+                                }
+                                .enterContent{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: 100%;
+                                }
+                                .enterContent p {
+                                    padding-top: 1em;
+                                    width: 50%;
+                                    text-align: left;
+                                    margin-left: 0;
+                                }
+                                .enterInput {
+                                    width: 50%;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    margin-left: auto;
+                                    margin-right: 0;
+                                }
+                
+                                .enterInput input {
+                                    height: 3.25em;
+                                    width: 35%;
+                                }
+                
+                
+                                .enterInput button::before {
+                                    left: -75%;
+                                }
+                
+                                .enterInput button {
+                                    height: 2.5em;
+                                    padding: .5em 1.5em;
+                                }
+.complete {
+    width: 37%;
+    top: 19.5%;
+    left: 31.5%;
+    padding: 3em 2.5em;
+}
+
+.complete img {
+    width: 17.5%;
+    margin-bottom: 2em;
+}
+
+.complete h2 {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.complete p {
+
+    font-size: 1em;
+    line-height: 1.75em;
+    margin-bottom: 1.5em;
+}
+
+.complete button {
+    font-size: .95em;
+    padding: 1em 2em;
+}
+
+    }
 

@@ -15,6 +15,7 @@ const complete = document.querySelector('.complete');
 const gotItButton = document.querySelector('#gotIt');
 const progressBar = document.querySelector('progress');
 const bookmark = document.querySelector('#bookmark');
+
 const choosenReward = document.querySelectorAll('.pledge button');
 console.log(choosenReward);
 let allMoney = 89914;
@@ -49,7 +50,11 @@ modalCloseButton.addEventListener('click',()=>{
 })
 //bookmarked
 bookmark.addEventListener('click',()=>{
-    bookmark.getAttribute('src') =='./images/icon-bookmark.svg' ? bookmark.setAttribute('src','./images/icon-bookmarked.svg') : bookmark.setAttribute('src','./images/icon-bookmark.svg')
+    let bookmarkImg = document.querySelector('#bookmark img')
+    bookmarkImg.getAttribute('src') =='./images/icon-bookmark.svg' ? 
+    bookmark.innerHTML =`<img src="./images/icon-bookmarked.svg" alt="icon-bookmarked"><p style="color:hsl(176,72%,28%)">Bookmarked</p>` :
+    bookmark.innerHTML =`<img src="./images/icon-bookmark.svg" alt="icon-bookmark"><p>Bookmark</p>`;
+    
 })
 //choose single pledge type
 checkboxes.forEach((checkbox,idx)=>{
