@@ -124,8 +124,7 @@ button.bookmark{
 }
 #backDetails hr{
     width: 27.5%;
-    margin:1.5em auto;
-    
+    margin:1.5em auto; 
 }
 #backDetails .cashBacked,
 #backDetails .totalBackers,
@@ -151,12 +150,18 @@ progress[value] {
     width: 100%;
     height: .75em;
     margin-top: 2em;
+    border: 0;
+    border-radius: 2em;
 }
-progress[value]::-webkit-progress-bar {
+progress[value]::-webkit-progress-bar{
     background-color: #eee;
     border-radius: 2em;
 }
 progress[value]::-webkit-progress-value{
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 2em;
+}
+::-moz-progress-bar{
     background-color: hsl(176, 50%, 47%);
     border-radius: 2em;
 }
@@ -212,19 +217,18 @@ progress[value]::-webkit-progress-value{
     padding: 1em 2em;
 }
 .pledge button.grey{
-        background-color: hsl(0, 0%, 48%);
-        border: 0;
-        border-radius: 2em;
-        color: white;
-        font-family: 'Commissioner';
-        font-weight: 500;
-        padding: 1em 2em;
-        font-size: 1em;
+    background-color: hsl(0, 0%, 48%);
+    border: 0;
+    border-radius: 2em;
+    color: white;
+    font-family: 'Commissioner';
+    font-weight: 500;
+    padding: 1em 2em;
+    font-size: 1em;
 }
 .pledge.outOfStock{
     opacity: .4;
 }
-
 .modalWrapper{
     font-family: 'Commissioner';
     top: 0;
@@ -255,7 +259,6 @@ progress[value]::-webkit-progress-value{
     font-size: .9em;
     line-height: 1.5em;
 }
-
 .modalPledge{
     width: 100%;
     margin: 2em 0;
@@ -388,8 +391,8 @@ progress[value]::-webkit-progress-value{
 
 @media (min-width: 768px) {
     body {
-            background-image: url('./images/image-hero-desktop.jpg');
-        }
+        background-image: url('./images/image-hero-desktop.jpg');
+    }
     header {
         width: 80%;
         display: flex;
@@ -508,167 +511,152 @@ progress[value]::-webkit-progress-value{
     #backDetails small{
         font-size: .95em;
     }
-        #aboutAndPledge {
-            padding: 2.5em 2.5em;
-        }
-    
-        #aboutAndPledge p {
-            font-size: 1em;
-            line-height: 1.75em;
-            margin-bottom: 1.5em;
-        }
-        #aboutAndPledge .pledge {
-            padding: 2em;
-        }
-        .pledge-heading{
-            display: flex;
-            justify-content: space-between;
-        }
-        .pledge h3 {
-            font-size: 1em;
-            font-weight: 700;
-            margin-bottom: .5em;
-        }
-        .pledge-bottom{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }    
-        .pledge button.cyan,
-        .pledge button.grey {
-            padding: .5em 2em;
-            height: 3em;
-        }
-                .modalWrapper {
-                    height: 270vh;
-                }
-        
-                .modal {
-                    top: 7.75%;
-                    left: 25%;
-                    padding: 3.5em 3.5em;
-                }
-                .modalHeading {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 1.5em;
-                }
-                .modalHeading img{
-                    margin-top: -4em;
-                    margin-right: -1em;
-                }
-        
-                .modalPledgeHeader {
-                    display: flex;
-                    margin-bottom: 2em;
-                    align-items: center;
-                }
-        
-                .modalPledgeHeader input {
-                    width: 1.75em;
-                    margin-right: 2em;
-                }
-                .checkText{
-                    display: flex;
-                    align-items: center;
-                }
-                .modalPledgeHeader h3 {
-                    font-size: .95em;
-                }
-                .modalPledgeHeader h3:hover{
-                    color: hsl(176, 50%, 47%);
-                    cursor: pointer;
-                }
-                .modalPledgeHeader span {
-                    margin-top: 0;
-                    margin-left: 1em;
-                }
-                .modalPledge p {
-                    margin-top: -1em;
-                    margin-bottom: 0;
-                    margin-left: 3.5em;
-                }
-        
-                .modalCheck {
-                    position: relative;
-                }       
-                .modal .left{
-                    position: absolute;
-                    top: 2em;
-                    right: 5%;
-                } 
-                                .enter {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                }
-                
-                                .enter hr {
-                                    width: 112%;
-                                }
-                                .enterContent{
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    width: 100%;
-                                }
-                                .enterContent p {
-                                    padding-top: 1em;
-                                    width: 50%;
-                                    text-align: left;
-                                    margin-left: 0;
-                                }
-                                .enterInput {
-                                    width: 50%;
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    margin-left: auto;
-                                    margin-right: 0;
-                                }
-                
-                                .enterInput input {
-                                    height: 3.25em;
-                                    width: 35%;
-                                }
-                
-                
-                                .enterInput button::before {
-                                    left: -75%;
-                                }
-                
-                                .enterInput button {
-                                    height: 2.5em;
-                                    padding: .5em 1.5em;
-                                }
-.complete {
-    width: 37%;
-    top: 19.5%;
-    left: 31.5%;
-    padding: 3em 2.5em;
-}
-
-.complete img {
-    width: 17.5%;
-    margin-bottom: 2em;
-}
-
-.complete h2 {
-    font-size: 1.4em;
-    margin-bottom: 1em;
-}
-
-.complete p {
-
-    font-size: 1em;
-    line-height: 1.75em;
-    margin-bottom: 1.5em;
-}
-
-.complete button {
-    font-size: .95em;
-    padding: 1em 2em;
-}
-
+    #aboutAndPledge {
+        padding: 2.5em 2.5em;
     }
+    #aboutAndPledge p {
+        font-size: 1em;
+        line-height: 1.75em;
+        margin-bottom: 1.5em;
+    }
+    #aboutAndPledge .pledge {
+        padding: 2em;
+    }
+    .pledge-heading{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pledge h3 {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: .5em;
+    }
+    .pledge-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }    
+    .pledge button.cyan,
+    .pledge button.grey {
+        padding: .5em 2em;
+        height: 3em;
+    }
+    .modalWrapper {
+        height: 270vh;
+    }
+    .modal {
+        top: 7.75%;
+        left: 25%;
+        padding: 3.5em 3.5em;
+    }
+    .modalHeading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+    }
+    .modalHeading img{
+        margin-top: -4em;
+        margin-right: -1em;
+    }
+    .modalPledgeHeader {
+        display: flex;
+        margin-bottom: 2em;
+        align-items: center;
+    }
+    .modalPledgeHeader input {
+        width: 1.75em;
+        margin-right: 2em;
+    }
+    .checkText{
+        display: flex;
+        align-items: center;
+    }
+    .modalPledgeHeader h3 {
+        font-size: .95em;
+    }
+    .modalPledgeHeader h3:hover{
+        color: hsl(176, 50%, 47%);
+        cursor: pointer;
+    }
+    .modalPledgeHeader span {
+        margin-top: 0;
+        margin-left: 1em;
+    }
+    .modalPledge p {
+        margin-top: -1em;
+        margin-bottom: 0;
+        margin-left: 3.5em;
+    }
+    .modalCheck {
+        position: relative;
+    }       
+    .modal .left{
+        position: absolute;
+        top: 2em;
+        right: 5%;
+    } 
+    .enter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .enter hr {
+        width: 112%;
+    }
+    .enterContent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .enterContent p {
+        padding-top: 1em;
+        width: 50%;
+        text-align: left;
+        margin-left: 0;
+    }
+    .enterInput {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .enterInput input {
+        height: 3.25em;
+        width: 35%;
+    }        
+    .enterInput button::before {
+        left: -75%;
+    }
+    .enterInput button {
+        height: 2.5em;
+        padding: .5em 1.5em;
+    }
+    .complete {
+        width: 37%;
+        top: 19.5%;
+        left: 31.5%;
+        padding: 3em 2.5em;
+    }
+    .complete img {
+        width: 17.5%;
+        margin-bottom: 2em;
+    }
+    .complete h2 {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+    }
+    .complete p {
+        font-size: 1em;
+        line-height: 1.75em;
+        margin-bottom: 1.5em;
+    }
+    .complete button {
+        font-size: .95em;
+        padding: 1em 2em;
+    }
+
+}
 
